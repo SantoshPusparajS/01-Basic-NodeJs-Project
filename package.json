@@ -2,18 +2,19 @@
   "name": "01---basic-nodejs-project",
   "version": "1.0.0",
   "description": "This is the basic express project without using any db",
-  "main": "app.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm start",
-    "dev": "nodemon start"
+    "start": "npm server.js",
+    "dev": "nodemon server.js"
   },
   "author": "Santosh Pusparaj S",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
