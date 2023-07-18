@@ -36,3 +36,26 @@ MONGODB : embedding and denormalizing RDBMS : normalization (creating a new tabl
 MONGOOSE is Object Data Modelling library for mongodb and nodejs
 
 Schema >> Model
+
+QueryString : starts with ?
+
+Filtering, Sorting :?sort=-price(sort desc on price), Limiting Fields (use query.select()) and how to exclude (use "-fields") or we can provide select : false in our model.
+Pagination : query.skip(2).limit(10) --> show results from 21
+countDocuments() : gives the count of documents
+Aliasing
+
+Aggregation pipelines : Matching, Unwind, Projection
+
+Virtual Properties: saved to schema but will not be persisted or save in database. Used to do computational parts with documents.
+
+Document Middleware: runs before .save() and .create() --> this refers to the document here
+
+Pre and Post middleware functions.
+
+Query Middleware : runs before or after query executed. this refers to the query here
+
+Pre and post middleware functions
+
+Aggregation Middleware: runs before or after the aggregations
+
+Validators : Built In validator and custom validators
