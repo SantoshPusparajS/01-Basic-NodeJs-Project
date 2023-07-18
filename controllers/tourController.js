@@ -5,6 +5,7 @@ const getAllTours = async (req, res) => {
     const tours = await Tour.find();
     res.status(200).json({
       status: "success",
+      length: tours.length,
       data: {
         tours: tours,
       },
