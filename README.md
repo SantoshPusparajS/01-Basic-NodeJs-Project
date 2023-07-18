@@ -30,3 +30,9 @@ morgan : third party middleware
 param middleware
 
 app.use(express.static()) : used to serve static files. Provide the image folder as args.
+
+MONGODB : embedding and denormalizing RDBMS : normalization (creating a new table and refer it in column)
+
+MONGOOSE is Object Data Modelling library for mongodb and nodejs
+
+Schema >> Model
