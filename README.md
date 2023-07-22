@@ -59,3 +59,9 @@ Pre and post middleware functions
 Aggregation Middleware: runs before or after the aggregations
 
 Validators : Built In validator and custom validators
+
+npm i ndb --global:: Add it in scripts
+
+Error types : Operational Errors(we can predict it) and programming errors
+
+Whatever passing into next() will be an error

@@ -1,3 +1,4 @@
+import AppError from "../errorHandling/appError.js";
 import Tour from "../models/tourModel.js";
 
 const getAllTours = async (req, res) => {
@@ -33,9 +34,13 @@ const createTours = async (req, res) => {
   }
 };
 
-const getTour = async (req, res) => {
+const getTour = async (req, res, next) => {
   try {
     const tour = await Tour.findById(req.params.id);
+
+    if (!tour) {
+      return next(new AppError("No tour found with that ID", 404)); //404 error with error middleware
+    }
     res.status(200).json({
       status: "success",
       data: {

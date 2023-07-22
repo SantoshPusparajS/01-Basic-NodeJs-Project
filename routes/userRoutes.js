@@ -6,6 +6,7 @@ import {
   deleteUser,
   updateUser,
 } from "../controllers/userController.js";
+
 const router = express.Router();
 
 router.route("/api/v1/users").get(getAllUsers).post(CreateUsers);

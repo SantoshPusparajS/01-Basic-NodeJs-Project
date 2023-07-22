@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  mongo_db:
+    container_name: mongo_db_database
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongodb:/data/db
+
+  rest_api:
+    container_name: express_app
+    build: .
+    ports:
+      - 4000:5000
+    volumes:
+      - .:/usr/src/app
+    environment:
+      PORT: 5000
+      DATABASE_PASSWORD: 9486849031
+      DATABASE: mongodb+srv://crowinlearnings:<PASSWORD>@samplecluster.dpk3fsj.mongodb.net/natours?retryWrites=true&w=majority
+      JWT_TOKEN: KaiserPermanente
+      JWT_EXPIRES: 30m
+      EMAIL_USERNAME: santoshpusparaj3@gmail.com
+      EMAIL_PASSWORD: San@9486849031
+    depends_on:
+      - mongo_db
+
+volumes:
+  mongodb: {}
