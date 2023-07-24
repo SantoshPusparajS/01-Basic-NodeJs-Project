@@ -8,5 +8,5 @@ jobs:
         uses: actions/checkout@v3
       - name: Run the node command
         run: npm ci
-      - name: Build and push Docker images
-        uses: docker/build-push-action@v4.1.1
+      - name: Docker Build
+        run: docker build -t node:latest .
