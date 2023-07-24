@@ -1,15 +1,15 @@
 name: First Github Actions Workflow
 on:
-  pull_request:
-    types:
-      - opened
-      - edited
-  #   workflow_dispatch:
   push:
     branches:
       - main
     paths-ignore:
       - ".github/workflows/*"
+#   pull_request:
+#     types:
+#       - opened
+#       - edited
+#   workflow_dispatch:
 jobs:
   NodeJs_Github_Actions:
     runs-on: ubuntu-latest
