@@ -1,0 +1,10 @@
+name: First Github Actions Workflow
+on: push
+jobs:
+  NodeJs_Github_Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code from repository
+        uses: actions/checkout@v3
+      - name: Run the node command
+        run: npm ci
