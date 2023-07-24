@@ -4,7 +4,7 @@ on:
     types:
       - opened
       - edited
-  workflow_dispatch:
+  #   workflow_dispatch:
   push:
     branches:
       - main
@@ -26,4 +26,4 @@ jobs:
           username: santoshpusparajs
           password: San@9486849031
       - name: Pushing the docker image to repository
-        run: docker push santoshpusparajs/sample
+        run: docker push node:latest
