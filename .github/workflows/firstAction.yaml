@@ -27,4 +27,4 @@ jobs:
           username: santoshpusparajs
           password: San@9486849031
       - name: Pushing the docker image to repository
-        run: docker push node:latest
+        run: docker push santoshpusparajs/node:latest
