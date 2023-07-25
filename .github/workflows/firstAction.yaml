@@ -13,6 +13,7 @@ on:
 #   workflow_dispatch:
 jobs:
   NodeJs_Github_Actions:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Get the code from repository
